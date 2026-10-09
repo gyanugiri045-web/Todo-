@@ -8,7 +8,6 @@ class Task(models.Model):
     description = models.TextField(blank=True)
     due_date = models.DateField()
     priority = models.CharField(
-        max_length=10,
         choices=[('Low', 'Low'), ('Medium', 'Medium'), ('High', 'High')],
         default='Low',
     )
@@ -16,4 +15,5 @@ class Task(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.title
+        return self.title 
+    
